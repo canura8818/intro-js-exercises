@@ -1,0 +1,9 @@
+// JSON syntax: quotations for key and value
+{
+    "name": "MUSA 6110",
+    "schedule_type": "Lecture",
+    "instruction_method": "In person",
+    "campus": "Philadelphia",
+    "location": "McNeil"
+}
+

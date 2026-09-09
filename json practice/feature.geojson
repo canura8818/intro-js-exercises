@@ -1,0 +1,18 @@
+{
+    "type": "Feature",
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": 
+        [
+            [
+                [-69, 45],
+                [-70, 44],
+                [-71, 43]
+            ]
+        ] 
+    },
+    "properties": {
+        "name": "Random shape"
+    }
+    
+}
