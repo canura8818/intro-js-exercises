@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: blanchedalmond;
+    height: 100vh;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 0;
+}
+
+.map {
+    background-color: transparent;
+    border: 1px solid yellowgreen;
+    flex-grow: 1;
+}

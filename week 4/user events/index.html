@@ -1,0 +1,23 @@
+<!doctype html>
+
+<html lan="'en">
+    <head>
+        <title>Example of User Events</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Example of User Events</h1>
+        </header>
+
+        <main>
+            <form>
+                <button type="button" id="color-button"
+                ondblclick="this.style.backgroundColor = rgb($(Math.floor(Math.random() * 256)))"
+                Change color</button>
+            </form>
+        </main>
+
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>

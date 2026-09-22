@@ -18,8 +18,10 @@ Example: countItem(['a', 'b', 'a'], 'a') should return 2
 
 let countItem = (arr, item) => {
   let count = 0;
-  for (let i of arr){
-    count += i === item;
+  for (let i of arr) {
+    if (i === item) {
+      count++;
+    }
   }
   return count;
 };
@@ -33,8 +35,17 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let isEven = (number) => (number % 2) === 0;
+let isEven = (n) => (n % 2) === 0;
 let filterEven = (arr) => arr.filter(isEven);
+
+// {
+//   const evenArr = [];
+//   for (let item of arr) {
+//     if (isEven(item)) {
+//       evenArr.push(item);
+//     }
+//   }
+// };
 
 console.log('filterEven success:', _(filterEven([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 4, 4, 4]));
 
@@ -44,7 +55,7 @@ Instructions: Write a function which takes an array and returns a new array with
   function MUST use the isOdd function and MUST NOT change the original array.
 ===================== */
 
-let isOdd = (number) => (number % 2) === 1;
+let isOdd = (n) => (n % 2) === 1;
 let filterOdd = (arr) => arr.filter(isOdd);
 
 console.log('filterOdd success:', _(filterOdd([1, 2, 3, 4, 5, 4, 4])).isEqual([1, 3, 5]));
@@ -58,6 +69,14 @@ Instructions: Write a function which takes an array and returns a new array with
 
 let plusOne = (n) => n + 1;
 let mapIncrement = (arr) => arr.map(plusOne);
+
+// {
+//   let newArr = [];
+//   for (let i of arr) {
+//     newArr.push(plusOne(arr[i]));
+//   }
+//   return newArr;
+// };
 
 console.log('mapIncrement success:', _(mapIncrement([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 3, 4, 5, 6, 5, 5]));
 
@@ -80,8 +99,16 @@ Instructions: Write a function which takes an array and returns the sum of all
   array.
 ===================== */
 
-let add = (total, value) => total + value;
+let add = (n1, n2) => n1 + n2;
 let reduceSum = (arr) => arr.reduce(add);
+
+// {
+//   const sum = 0;
+//   for (let i of arr) {
+//     sum = add(sum, i);
+//   }
+//   return sum;
+// };
 
 console.log('reduceSum success:', reduceSum([1, 2, 3, 4, 5, 4, 4]) === 23);
 
@@ -92,7 +119,7 @@ Instructions: Write a function which takes an array and returns the product of
   original array.
 ===================== */
 
-let multiply = (total, value) => total*value;
+let multiply = (total, value) => total * value;
 let reduceProduct = (arr) => arr.reduce(multiply);
 
 console.log('reduceProduct success:', reduceProduct([1, 2, 3, 4, 5, 4, 4]) === 1920);

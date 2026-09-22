@@ -1,4 +1,3 @@
-
 const mapElement = document.querySelector('#map');
 var map = L.map(mapElement, { maxZoom: 18 }).setView([51.505, -0.09], 10);
 
@@ -39,14 +38,14 @@ function onMapClick(e) {
 
 map.on('click', onMapClick);
 
-var popup = L.popup();
+// var popup = L.popup();
 
-// popup instead of alert
-function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
-        .openOn(map);
-}
+// // popup instead of alert
+// function onMapClick(e) {
+//     popup
+//         .setLatLng(e.latlng)
+//         .setContent("You clicked the map at " + e.latlng.toString())
+//         .openOn(map);
+// }
 
-map.on('click', onMapClick);
+// map.on('click', onMapClick);
